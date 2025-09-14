@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio Virtual - Mi Nombre</title>
+  <style>
+    :root{ --bg:#f6f4fb; --purple:#5b2e8a; --muted:#6b6b6b; --card:#ffffff }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, Arial; margin:0; background:var(--bg); color:#222}
+    header{background:linear-gradient(90deg,var(--purple),#7a3fbf); color:#fff; padding:18px 24px; display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    header h1{font-size:18px;margin:0}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    button.nav-btn{background:transparent;border:2px solid rgba(255,255,255,0.18);color:#fff;padding:8px 12px;border-radius:10px;cursor:pointer}
+    .header-info{display:flex;align-items:center;gap:12px;flex:1 1 100%;margin-top:10px}
+    .header-info img{height:60px}
+    .header-text{display:flex;flex-direction:column}
+    .header-text strong{font-size:14px}
+    .container{max-width:1000px;margin:24px auto;padding:0 16px}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .profile{display:flex;gap:12px;align-items:center}
+    .avatar{width:72px;height:72px;border-radius:10px;background:linear-gradient(180deg,#fff3,#eee);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--purple)}
+    label{display:block;font-size:13px;color:var(--muted);margin-top:10px}
+    input[type=text], textarea{width:100%;padding:8px;border-radius:8px;border:1px solid #e6e6e6;margin-top:6px}
+    .small{font-size:13px;color:var(--muted)}
+    .section{margin-bottom:16px}
+    .hidden{display:none}
+    .projects{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+    .project-card{border:1px dashed #e6e6e6;padding:12px;border-radius:8px}
+    .controls{display:flex;gap:8px;margin-top:12px}
+    .btn{background:var(--purple);color:#fff;padding:8px 12px;border-radius:8px;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid #ccc;color:#333}
+    footer{text-align:center;color:var(--muted);margin:36px 0}
+    @media(max-width:900px){.grid{grid-template-columns:1fr} .container{padding:12px} .header-info{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portafolio Virtual</h1>
+    <nav>
+      <button class="nav-btn" data-target="perfil">Datos personales</button>
+      <button class="nav-btn" data-target="unidad1">Unidad 1</button>
+      <button class="nav-btn" data-target="unidad2">Unidad 2</button>
+      <button class="nav-btn" data-target="sesiones">Sesiones</button>
+    </nav>
+    <div class="header-info">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/UNA_Puno_logo.png" alt="Logo UNA Puno">
+      <div class="header-text">
+        <strong>Universidad Nacional del Altiplano - Puno</strong>
+        <span>Facultad de Ingeniería Estadística e Informática</span>
+        <label>Curso:</label>
+        <input id="curso" type="text" placeholder="Nombre del curso">
+        <label>Docente:</label>
+        <input id="docente" type="text" placeholder="Nombre del docente">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <div>
+        <!-- Perfil / Datos personales -->
+        <section id="perfil" class="card section">
+          <div class="profile">
+            <div class="avatar" id="avatarTxt">TU</div>
+            <div>
+              <strong id="displayName">Tu Nombre</strong>
+              <div class="small">Estudiante / Programación Numérica - FINESI</div>
+            </div>
+          </div>
+
+          <hr style="margin:12px 0" />
+
+          <label>Nombre completo</label>
+          <input id="nombre" type="text" placeholder="Ej. Luz Leidy Quispe Ito">
+
+          <label>Correo / Contacto</label>
+          <input id="correo" type="text" placeholder="ejemplo@correo.com">
+
+          <label>Descripción breve</label>
+          <textarea id="descripcion" rows="3" placeholder="Describe brevemente quién eres y qué haces"></textarea>
+
+          <div class="controls">
+            <button class="btn" id="guardarPerfil">Guardar</button>
+            <button class="btn ghost" id="resetPerfil">Restablecer</button>
+          </div>
+        </section>
+
+        <!-- Unidad 1 -->
+        <section id="unidad1" class="card section hidden">
+          <h2>Unidad 1</h2>
+          <p class="small">Organiza aquí tus trabajos de la Unidad 1.</p>
+
+          <div>
+            <label>Título del trabajo</label>
+            <input id="u1_titulo" type="text" placeholder="Nombre del trabajo">
+            <label>Descripción corta</label>
+            <input id="u1_desc" type="text" placeholder="Resumen breve">
+
+            <div class="controls">
+              <button class="btn" id="addU1">Agregar trabajo</button>
+              <button class="btn ghost" id="clearU1">Borrar todos (Unidad 1)</button>
+            </div>
+
+            <div class="projects" id="listaU1"></div>
+          </div>
+        </section>
+
+        <!-- Unidad 2 -->
+        <section id="unidad2" class="card section hidden">
+          <h2>Unidad 2</h2>
+          <p class="small">Organiza aquí tus trabajos de la Unidad 2.</p>
+
+          <label>Título del trabajo</label>
+          <input id="u2_titulo" type="text" placeholder="Nombre del trabajo">
+          <label>Descripción corta</label>
+          <input id="u2_desc" type="text" placeholder="Resumen breve">
+
+          <div class="controls">
+            <button class="btn" id="addU2">Agregar trabajo</button>
+            <button class="btn ghost" id="clearU2">Borrar todos (Unidad 2)</button>
+          </div>
+
+          <div class="projects" id="listaU2"></div>
+        </section>
+
+        <!-- Sesiones -->
+        <section id="sesiones" class="card section hidden">
+          <h2>Sesiones / Categorías</h2>
+          <p class="small">Agrupa tus trabajos por sesión (por ejemplo: Sesión 1, 2, Proyecto final...)</p>
+
+          <label>Nombre de la sesión</label>
+          <input id="session_name" type="text" placeholder="Ej. Sesión 1: Introducción">
+          <div class="controls">
+            <button class="btn" id="addSession">Crear sesión</button>
+            <button class="btn ghost" id="clearSessions">Borrar sesiones</button>
+          </div>
+
+          <div id="sessionsList" style="margin-top:12px"></div>
+        </section>
+      </div>
+
+      <!-- Panel lateral resumen -->
+      <aside>
+        <div class="card">
+          <h3>Resumen rápido</h3>
+          <p class="small">Navegación rápida y operaciones guardadas en tu navegador (localStorage).</p>
+
+          <div style="margin-top:12px">
+            <strong>Progreso</strong>
+            <div class="small" id="counts">Cargando...</div>
+          </div>
+
+          <hr style="margin:12px 0" />
+
+          <div>
+            <strong>Acciones</strong>
+            <div class="controls" style="flex-direction:column;align-items:stretch">
+              <button class="btn" id="showPerfilSide">Ver datos personales</button>
+              <button class="btn" id="showU1Side">Ir a Unidad 1</button>
+              <button class="btn" id="showU2Side">Ir a Unidad 2</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <strong>Instrucciones</strong>
+          <ol style="padding-left:18px;margin-top:10px">
+            <li class="small">Usa los botones de arriba para mostrar cada sección.</li>
+            <li class="small">Los datos y trabajos se guardan automáticamente en tu navegador.</li>
+            <li class="small">Si quieres resetear todo, borra el almacenamiento local desde el navegador.</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Hecho con ❤️ — Abre este archivo en tu navegador para usarlo. Los datos se guardan en tu equipo.
+    </footer>
+  </main>
+
+  <script>
+    // --- Helper: show/hide sections ---
+    const navButtons = document.querySelectorAll('.nav-btn');
+    function showSection(id){
+      document.querySelectorAll('main .card.section').forEach(s=>s.classList.add('hidden'));
+      const el = document.getElementById(id);
+      if(el) el.classList.remove('hidden');
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
+    navButtons.forEach(b=>b.addEventListener('click', ()=> showSection(b.dataset.target)));
+
+    // Side quick buttons
+    document.getElementById('showPerfilSide').addEventListener('click', ()=> showSection('perfil'));
+    document.getElementById('showU1Side').addEventListener('click', ()=> showSection('unidad1'));
+    document.getElementById('showU2Side').addEventListener('click', ()=> showSection('unidad2'));
+
+    // --- Local storage keys ---
+    const KEY_PROFILE = 'pv_profile_v1';
+    const KEY_U1 = 'pv_u1_v1';
+    const KEY_U2 = 'pv_u2_v1';
+    const KEY_SESS = 'pv_sessions_v1';
+
+    // --- Profile ---
+    const nombre = document.getElementById('nombre');
+    const correo = document.getElementById('correo');
+    const descripcion = document.getElementById('descripcion');
+    const displayName = document.getElementById('displayName');
+    const avatarTxt = document.getElementById('avatarTxt');
+
+    function loadProfile(){
+      const data = JSON.parse(localStorage.getItem(KEY_PROFILE) || 'null');
+      if(data){
+        nombre.value = data.nombre || '';
+        correo.value = data.correo || '';
+        descripcion.value = data.descripcion || '';
+        displayName.textContent = data.nombre || 'Tu Nombre';
+        avatarTxt.textContent = (data.nombre||'TU').split(' ').slice(0,2).map(x=>x[0]||'').join('').toUpperCase();
+      }
+    }
+    document.getElementById('guardarPerfil').addEventListener('click', ()=>{
+      const obj = {nombre:nombre.value, correo:correo.value, descripcion:descripcion.value};
+      localStorage.setItem(KEY_PROFILE, JSON.stringify(obj));
+      loadProfile();
+      updateCounts();
+      alert('Perfil guardado localmente.');
+    });
+    document.getElementById('resetPerfil').addEventListener('click', ()=>{
+      if(confirm('¿Eliminar datos personales guardados?')){
+        localStorage.removeItem(KEY_PROFILE);
+        nombre.value = correo.value = descripcion.value = '';
+        displayName.textContent = 'Tu Nombre';
+        avatarTxt.textContent = 'TU';
+        updateCounts();
+      }
+    });
+
+    // --- Unidad functions ---
+    function renderList(key, container){
+      const arr = JSON.parse(localStorage.getItem(key) || '[]');
+      const el = document.getElementById(container);
+      el.innerHTML = '';
+      if(arr.length===0){ el.innerHTML = '<div class="small">No hay trabajos aún.</div>'; return }
+      arr.forEach((t,i)=>{
+        const div = document.createElement('div');
+        div.className = 'project-card';
+        div.innerHTML = `<strong>${escapeHtml(t.t)}</strong><div class="small">${escapeHtml(t.d)}</div><div style="margin-top:8px;display:flex;gap:6px"><button class="btn" data-i="${i}" data-key="${key}">Ver</button><button class="btn ghost" data-del="${i}" data-keydel="${key}">Eliminar</button></div>`;
+        el.appendChild(div);
+      });
+    }
+    function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, c=> ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]) }
+
+    document.getElementById('addU1').addEventListener('click', ()=>{
+      const t = document.getElementById('u1_titulo').value.trim();
+      const d = document.getElementById('u1_desc').value.trim();
+      if(!t) return alert('Pon un título para el trabajo.');
+      const arr = JSON.parse(localStorage.getItem(KEY_U1) || '[]');
+      arr.push({t,d,ts:Date.now()});
+      localStorage.setItem(KEY_U1, JSON.stringify(arr));
+      document.getElementById('u1_titulo').value='';document.getElementById('u1_desc').value='';
+      renderList(KEY_U1,'listaU1'); updateCounts();
+    });
+    document.getElementById('addU2').addEventListener('click', ()=>{
+      const t = document.getElementById('u2_titulo').value.trim();
+      const d = document.getElementById('u2_desc').value.trim();
+      if(!t) return alert('Pon un título para el trabajo.');
+      const arr = JSON.parse(localStorage.getItem(KEY_U2) || '[]');
+      arr.push({t,d,ts:Date.now()});
+      localStorage.setItem(KEY_U2, JSON.stringify(arr));
+      document.getElementById('u2_titulo').value='';document.getElementById('u2_desc').value='';
+      renderList(KEY_U2,'listaU2'); updateCounts();
+    });
+
+    // Delegated delete/view for project lists
+    document.addEventListener('click', (e)=>{
+      if(e.target.dataset.del!==undefined){
+        const idx = Number(e.target.dataset.del); const key = e.target.dataset.keydel;
+        const arr = JSON.parse(localStorage.getItem(key) || '[]'); arr.splice(idx,1); localStorage.setItem(key, JSON.stringify(arr));
+        renderList(KEY_U1,'listaU1'); renderList(KEY_U2,'listaU2'); updateCounts();
+      }
+      if(e.target.dataset.i!==undefined){
+        const idx = Number(e.target.dataset.i); const key = e.target.dataset.key;
+        const arr = JSON.parse(localStorage.getItem(key) || '[]');
+        const it = arr[idx];
+        alert(`Título: ${it.t}\n\nDescripción: ${it.d || '(sin)'}\n\nGuardado: ${new Date(it.ts).toLocaleString()}`);
+      }
+    });
+
+    document.getElementById('clearU1').addEventListener('click', ()=>{ if(confirm('Borrar todos los trabajos de Unidad 1?')){ localStorage.removeItem(KEY_U1); renderList(KEY_U1,'listaU1'); updateCounts(); }});
+    document.getElementById('clearU2').addEventListener('click', ()=>{ if(confirm('Borrar todos los trabajos de Unidad 2?')){ localStorage.removeItem(KEY_U2); renderList(KEY_U2,'listaU2'); updateCounts(); }});
+
+    // --- Sessions ---
+    function renderSessions(){
+      const arr = JSON.parse(localStorage.getItem(KEY_SESS) || '[]');
+      const el = document.getElementById('sessions
