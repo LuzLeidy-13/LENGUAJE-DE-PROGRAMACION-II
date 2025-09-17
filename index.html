@@ -3,24 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>Portafolio Programación Numérica</title>
-    <!-- Vinculamos el archivo CSS externo -->
-    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        /* GENERAL */
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #322a38, #0c010f, #322a38);
+            color: #5e5a5a;
+        }
+
+        /* ENCABEZADO */
+        header {
+            border-bottom: 3px solid #4b0082;
+            padding: 25px 35px;
+            background: #3a074799;
+            text-align: center;
+        }
+
+        .titulo h1 {
+            margin: 0;
+            font-size: 45px;
+            color: #eeebf0;
+        }
+        .titulo h2, .titulo h3 {
+            margin: 3px 2;
+            font-size: 30px;
+        }
+
+        /* CONTENEDORES */
+        .contenedor {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px;
+            gap: 60px;
+            color: #eeebf0;
+        }
+
+        .caja {
+            flex: 1;
+            background: rgba(85, 28, 90, 0.603);
+            padding: 50px;
+            border: 2px solid #41255c;
+            border-radius: 40px;
+        }
+
+        .datos-flex {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        /* BOTONES */
+        .unidades {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .boton {
+            display: inline-block;
+            margin: 40px;
+            padding: 30px 60px;
+            background: #593274a3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #6a0dad;
+        }
+    </style>
 </head>
 <body>
 
     <!-- ENCABEZADO -->
     <header>
-        <div class="header-contenido">
-            <img src="img.html/logo_unap.png" alt="Logo Universidad" class="logo">
-            
-            <div class="titulo">
-                <h1>Universidad Nacional del Altiplano</h1>
-                <h2>Facultad de Ingeniería Estadística e Informática</h2>
-                <h3>Escuela Profesional de Ingeniería Estadística e Informática</h3>
-                <h2>PROGRAMACIÓN NUMÉRICA</h2>
-            </div>
-
-            <img src="img.html/logo_finesi.png" alt="Logo Facultad" class="logo">
+        <div class="titulo">
+            <h1>Universidad Nacional del Altiplano</h1>
+            <h2>Facultad de Ingeniería Estadística e Informática</h2>
+            <h3>Escuela Profesional de Ingeniería Estadística e Informática</h3>
+            <h2>--Bienvenido a mi portafolio--</h2>
+            <h1>PROGRAMACIÓN NUMÉRICA</h1>
         </div>
     </header>
 
@@ -28,39 +93,40 @@
     <section class="contenedor">
         <!-- Datos personales -->
         <div class="caja">
-            <h3>Datos Personales</h3>
-            <div class="datos-flex">
-                <img src="img.html/perfil_estudiante.jpg" alt="Foto del estudiante" class="foto">
-                <div>
-                    <p><strong>Nombre:</strong> QUISPE ITO LUZ LEIDY</p>
-                    <p><strong>Código:</strong> 240291</p>
-                    <p><strong>Correo:</strong> quispeitoluzleidy@gmail.com</p>
-                </div>
+            <h1>Datos Personales</h1>
+            <div>
+                <h2><strong>Nombre:</strong> QUISPE ITO LUZ LEIDY</h2>
+                <h2><strong>Código:</strong> 240291</h2>
+                <h2><strong>Correo:</strong> quispeitoluzleidy@gmail.com</h2>
             </div>
         </div>
 
         <!-- Datos del curso -->
         <div class="caja">
-            <h3>Sobre el Curso</h3>
-            <p><strong>Docente:</strong> Nombre del docente</p>
-            <p><strong>Semestre:</strong> 2025-I</p>
-            <p><strong>Grupo:</strong> A</p>
+            <h1>Sobre el Curso</h1>
+            <h2><strong>Docente:</strong> TORRES CRUZ FRED</h2>
+            <h2><strong>Semestre:</strong> 2025-I</h2>
+            <h2><strong>Grupo:</strong> A</h2>
         </div>
     </section>
 
     <!-- INTRODUCCIÓN -->
     <section class="caja">
-        <h3>Introducción al curso</h3>
-        <p>La programación numérica es ...</p>
+        <h1>Introducción al curso</h1>
+        <h2>
+            Numerical Programming is a branch of applied mathematics and computing that uses algorithmic methods
+            to solve mathematical problems in an approximate but efficient way. Its importance lies in the fact
+            that it allows addressing situations where exact solutions are impossible or too costly to compute,
+            being applied in engineering, applied sciences, economics, and more.
+        </h2>
     </section>
 
     <!-- BOTONES DE UNIDADES -->
     <section class="unidades">
-        <a href="unidad1.html" class="boton">Unidad I</a>
+        <!-- Cambia "unidad1.pdf" por el nombre exacto de tu archivo -->
+        <a href="unidad1.pdf" class="boton" download>Unidad I</a>
         <a href="unidad2.html" class="boton">Unidad II</a>
     </section>
 
 </body>
 </html>
-
-
