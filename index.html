@@ -1,91 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Portafolio Programación Numérica</title>
+<header>
     <style>
         /* GENERAL */
-        body {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            margin: 0;
-            background: linear-gradient(to right, #322a38, #0c010f, #322a38);
-            color: #5e5a5a;
-        }
+body {
+    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #322a38, #0c010f,#322a38);
+    color: #bfa3c9;
+}
 
-        /* ENCABEZADO */
-        header {
-            border-bottom: 3px solid #4b0082;
-            padding: 25px 35px;
-            background: #3a074799;
-            text-align: center;
-        }
+/* ENCABEZADO */
+header {
+    border-bottom: 3px solid #4f4754;
+    padding: 25px 35px;
+    background: linear-gradient(#572884,#200534);
+}
 
-        .titulo h1 {
-            margin: 0;
-            font-size: 45px;
-            color: #eeebf0;
-        }
-        .titulo h2, .titulo h3 {
-            margin: 3px 2;
-            font-size: 30px;
-        }
+.header-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
 
-        /* CONTENEDORES */
-        .contenedor {
-            display: flex;
-            justify-content: space-between;
-            margin: 30px;
-            gap: 60px;
-            color: #eeebf0;
-        }
+.logo {
+    width: 230px;
+    height: auto;
+}
 
-        .caja {
-            flex: 1;
-            background: rgba(85, 28, 90, 0.603);
-            padding: 50px;
-            border: 2px solid #41255c;
-            border-radius: 40px;
-        }
+.titulo h1 {
+    margin: 0;
+    font-size: 45px;
+    color: #d7cfdb;
+}
+.titulo h2, .titulo h3 {
+    margin: 3px 2;
+    font-size: 30px;
+}
 
-        .datos-flex {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
+.contenedor {
+    margin: auto;
+    color: #85768f;
+    
+}
 
-        /* BOTONES */
-        .unidades {
-            text-align: center;
-            margin: 15px 0;
-        }
+/* CONTENEDORES */
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    gap: 60px;
+}
 
-        .boton {
-            display: inline-block;
-            margin: 40px;
-            padding: 30px 60px;
-            background: #593274a3;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.caja {
+    flex: 1;
+    background:repeating-linear-gradient(#572884,#200534) rgba(74, 14, 117, 0.603);
+    padding: 50px;
+    border: 2px solid #41255c;
+    border-radius: 40px;
+}
 
-        .boton:hover {
-            background: #6a0dad;
-        }
+
+.datos-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.foto {
+    width: 120px;
+    border-radius: 80%;
+    border: 2px solid #0c0c0c;
+}
+
+/* BOTONES */
+.unidades {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.boton {
+    display: inline-block;
+    margin: 40px;
+    padding: 30px 60px;
+    background: #593274a3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #6a0dad;
+}
+
     </style>
-</head>
+</header>
 <body>
 
     <!-- ENCABEZADO -->
     <header>
-        <div class="titulo">
-            <h1>Universidad Nacional del Altiplano</h1>
-            <h2>Facultad de Ingeniería Estadística e Informática</h2>
-            <h3>Escuela Profesional de Ingeniería Estadística e Informática</h3>
-            <h2>--Bienvenido a mi portafolio--</h2>
-            <h1>PROGRAMACIÓN NUMÉRICA</h1>
+        <div class="header-contenido">
+            <img src="logo_unap.png" alt="Logo Universidad" class="logo">
+            
+            <div class="titulo">
+                <h1>Universidad Nacional del Altiplano</h1>
+                <h2>Facultad de Ingeniería Estadística e Informática</h2>
+                <h3>Escuela Profesional de Ingeniería Estadística e Informática</h3>
+                <h2>--Bienvenido a mi portafolio--</h2>
+                <h1>PORGRAMACION NUMERICA</h1>
+            
+        
+            </div>
+
+            <img src="logo_finesi.png" alt="Logo Facultad" class="logo">
         </div>
     </header>
 
@@ -94,10 +124,13 @@
         <!-- Datos personales -->
         <div class="caja">
             <h1>Datos Personales</h1>
-            <div>
-                <h2><strong>Nombre:</strong> QUISPE ITO LUZ LEIDY</h2>
-                <h2><strong>Código:</strong> 240291</h2>
-                <h2><strong>Correo:</strong> quispeitoluzleidy@gmail.com</h2>
+            <div class="datos-flex">
+                <img src="perfil_estudiante.jpg" alt="Foto del estudiante" class="foto">
+                <div>
+                    <h2><strong>Nombre:</strong> QUISPE ITO LUZ LEIDY</h2>
+                    <h2><strong>Código:</strong> 240291</h2>
+                    <h2><strong>Correo:</strong> quispeitoluzleidy@gmail.com</h2>
+                </div>
             </div>
         </div>
 
@@ -113,19 +146,16 @@
     <!-- INTRODUCCIÓN -->
     <section class="caja">
         <h1>Introducción al curso</h1>
-        <h2>
-            Numerical Programming is a branch of applied mathematics and computing that uses algorithmic methods
-            to solve mathematical problems in an approximate but efficient way. Its importance lies in the fact
-            that it allows addressing situations where exact solutions are impossible or too costly to compute,
-            being applied in engineering, applied sciences, economics, and more.
-        </h2>
+        <h2>Numerical Programming is a branch of applied mathematics and computing that uses algorithmic methods
+             to solve mathematical problems in an approximate but efficient way. Its importance lies in the fact
+              that it allows addressing situations where exact solutions are impossible or too costly to compute,
+               being applied in engineering, applied sciences, economics, and more</h2>
     </section>
 
     <!-- BOTONES DE UNIDADES -->
     <section class="unidades">
-        <!-- Cambia "unidad1.pdf" por el nombre exacto de tu archivo -->
-        <a href="unidad1.pdf" class="boton" download>Unidad I</a>
-        <a href="unidad2.html" class="boton">Unidad II</a>
+        <a href="file:///C:/Users/HP/Desktop/mi%20portafolio/unidad1.html" class="boton">Unidad I</a>
+        <a href="file:///C:/Users/HP/Desktop/mi%20portafolio/unidad2.html" class="boton">Unidad II</a>
     </section>
 
 </body>
