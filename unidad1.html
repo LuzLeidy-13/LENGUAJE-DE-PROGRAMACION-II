@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+    <style>
+       /* GENERAL */
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, 'Trebuchet MS', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #0a0336, #030116);
+      color: #474747;
+    }
+
+    /* ENCABEZADO */
+    header {
+      border-bottom: 3px solid #01010a;
+      background: linear-gradient(#060114, #19056d);
+      color: rgb(178, 184, 227);
+    }
+
+    .header-contenido {
+      display: flex;
+      align-items: last baseline;
+      justify-content: space-between;
+      text-align: center;
+      flex-wrap: wrap;
+      padding: 20px 35px;
+    }
+
+    .logo {
+      width: 150px;
+      height: auto;
+    }
+
+    .titulo h1 {
+      margin: 0;
+      font-family:'Montserrat', sans-serif ;
+      color: #ffffff;
+    }
+
+    .titulo h2,
+    .titulo h3 {
+      margin: 1px 0;
+      font-size: 25px;
+      color: #6163a5;
+    }
+
+    .nav-simple a {
+      color: #ffffff;
+      text-decoration: gray;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .nav-simple a:hover {
+      background: #25299d;
+    }
+
+    /* CONTENEDORES */
+    .contenedor {
+      display: flex;
+      justify-content: space-between;
+      margin: 12px 15px 15px; /* 🧭 margen superior aumentado para que no tape el menú fijo */
+      gap: 120px;
+    }
+
+    .caja {
+      flex: 2;
+      background:linear-gradient(#040640,#01010a);
+      padding: 5px;
+      border: 2px solid #02020e;
+      border-radius: 5px;
+      color: #575859;
+      margin:0;
+    }
+
+    .datos-flex {
+      display: flex;
+      float: left;
+      align-items: center;
+      gap: 100px;
+    
+    }
+
+    .foto {
+      width: 250px ;
+      border-radius: 15%;
+      border: 1px solid #0c0c0c;
+      margin: 5px 0 50px;
+    
+      
+    }
+
+    /* BOTONES */
+
+    .unidades {
+      text-align: center;
+      margin: 5px 0 5px;
+    }
+
+    .semanas{
+       text-align: center;
+      margin: 5px 0 5px;
+    }  
+
+
+    .boton {
+      display: inline-block;
+      margin: 2px;
+      padding: 30px 30px;
+      background:#010313a3;
+      color: white;
+      text-decoration: rgb(29, 29, 129);
+      border-radius: 0px;
+      font-weight: bold;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .boton:hover {
+      background: #000000;
+    }
+
+
+
+
+
+
+    </style>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="header-contenido">
+            <img src="logo_unap.png" alt="Logo Universidad" class="logo">
+            
+            <div class="titulo">
+                <h1>Universidad Nacional del Altiplano</h1>
+                <h2>Facultad de Ingeniería Estadística e Informática</h2>
+                <h3>Escuela Profesional de Ingeniería Estadística e Informática</h3>
+                <h2>PROGRAMACIÓN NUMÉRICA - Unidad 1</h2>
+            </div>
+
+            <img src="logo_finesi.png" alt="Logo Facultad" class="logo">
+        </div>
+    </header>
+
+    <!-- CONTENIDO DE UNIDAD 1 -->
+    <section class="caja">
+        <h2>              TRABAJOS ENCARGADOS DURANTE LA UNIDAD I</h2>
+    </section>
+   <section class="caja">
+        <h3> SEMANA-2: EJEMPLOS REALIZADOS EL LUNES 01-09-2025</h3>
+       
+    </section>
+    <section>
+        <section class="semanas">
+        <a href="coche-primeraclase.py" class="boton">class coche</a>
+        <a href="teoremadepitagoras-clase1.py" class="boton">class Teorema de pitagoras</a>
+        <a href="rectangulo-clase1.py" class="boton">class Rectangulo</a>
+
+
+    </section>
+    <section class="caja">
+        <h3> SEMANA-2: EJEMPLOS REALIZADOS EL JUEVES 04-09-2025</h3>
+    </section>
+    <section>
+        <section class="semanas">
+             <a href="persona-clase2-ejemplo2.py" class="boton">Ejemplo 2 class Persona</a>
+        <a href="personatkinter-clase2.py" class="boton"> Ejemplo 2 class persona-Tkinter</a>
+        <a href="" class="boton">Eejmplo 3 class Empleado </a>
+    </section>
+     <section class="caja">
+        <h3> SEMANA-3: EJEMPLOS REALIZADOS EL LUNES 08-09-2025</h3>
+       
+    </section>
+    <section>
+        <section class="semanas">
+        <a href="factorial-clase3.py" class="boton">Ejemplo 1 class Fctorial</a>
+        <a href="factorialtkinter-clase3.py" class="boton">Ejemplo 1 class factorial Tkinter</a>
+        <a href="fibonacci-clase3.py" class="boton">Ejemplo 2 Class Fibonacci</a>
+        <a href="sumadenaturales-clase3.py" class="boton">Ejemplo 4 Class SumaNaturales</a>
+
+
+    </section>
+    <section class="caja">
+        <h3> SEMANA-3: EJEMPLOS REALIZADOS EL JUEVES 11-09-2025</h3>
+    </section>
+    <section>
+        <section class="semanas">
+             <a href="persona-clase2-ejemplo2.py" class="boton">Ejemplo 2 class Persona</a>
+        <a href="personatkinter-clase2.py" class="boton"> Ejemplo 2 class persona-Tkinter</a>
+        <a href="" class="boton">Eejmplo 3 class Empleado </a>
+    </section>
+
+    <section class="contenedor">
+  <div class="caja datos">
+         <!-- Información a la derecha -->
+      <div class="datos-flex">
+           <img src="lenguajeII.jpg" alt="Foto del estudiante" class="foto">
+        <div>
+          <h3><strong>Nombre:</strong> Quispe Ito Luz Leidy</h3>
+          <h3><strong>Código:</strong> 240291</h3>
+          <h3><strong>Correo:</strong> quispeitoluzleidy@gmail.com</h3>
+        </div>
+
+        <div>
+          <h3><strong>Docente:</strong> Coyla Idme Leonel</h3>
+          <h3><strong>Semestre:</strong> 2025-I</h3>
+          <h3><strong>Grupo:</strong> A</h3>
+        </div>
+      </div>            
+
+</section>
+    
+
+    <!-- BOTÓN DE REGRESAR -->
+    <div class="unidades">
+        <a href="index.html" class="boton">⬅ Regresar al Portafolio</a>
+    </div>
+
+</body>
+</html>

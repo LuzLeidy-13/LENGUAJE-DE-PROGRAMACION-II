@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Lenguaje de Programación II</title>
+  <style>
+    /* GENERAL */
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, 'Trebuchet MS', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #0c0438, #03011a);
+      color: #474747;
+    }
+
+    /* ENCABEZADO */
+    header {
+      border-bottom: 3px solid #02020f;
+      background: linear-gradient(#070216, #160454);
+      color: white;
+    }
+
+    .header-contenido {
+      display: flex;
+      align-items: last baseline;
+      justify-content: space-between;
+      text-align: center;
+      flex-wrap: wrap;
+      padding: 30px 45px;
+    }
+
+    .logo {
+      width: 190px;
+      height: auto;
+    }
+
+    .titulo h1 {
+      margin: 0;
+      font-family:'Montserrat', sans-serif ;
+      color: #ffffff;
+    }
+
+    .titulo h2,
+    .titulo h3 {
+      margin: 2px 0;
+      font-size: 20px;
+      color: #b0b2ff;
+    }
+
+    /* MENÚ DE NAVEGACIÓN */
+    .nav-simple {
+      /* 🧭 MENÚ FIJO */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background: rgba(3, 1, 26, 0.95);
+      backdrop-filter: blur(5px);
+      border-bottom: 2px solid #25299d;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .nav-simple ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .nav-simple a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .nav-simple a:hover {
+      background: #25299d;
+    }
+ /* CONTENEDORES */
+    .contenedor {
+      display: flex;
+      justify-content: space-between;
+      margin: 12px 15px 15px; /* 🧭 margen superior aumentado para que no tape el menú fijo */
+      gap: 120px;
+    }
+
+    .caja {
+      flex: 2;
+      background:linear-gradient(#01010a,#0c0438);
+      padding: 5px;
+      border: 2px solid #02020e;
+      border-radius: 5px;
+      color: #d1e2e9;
+      margin:0;
+    }
+
+    .datos-flex {
+      display: flex;
+      float: left;
+      align-items: center;
+      gap: 100px;
+    
+    }
+
+    .foto {
+      width: 250px ;
+      border-radius: 15%;
+      border: 1px solid #0c0c0c;
+      margin: 5px 0 5px;
+    
+      
+    }
+
+    /* BOTONES */
+
+    .unidades {
+      text-align: center;
+      margin: 5px 0 5px;
+    }
+
+    .semanas{
+       text-align: center;
+      margin: 5px 0 5px;
+    }  
+
+
+    .boton {
+      display: inline-block;
+      margin: 2px;
+      padding: 30px 30px;
+      background:#010313a3;
+      color: white;
+      text-decoration: rgb(29, 29, 129);
+      border-radius: 0px;
+      font-weight: bold;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .boton:hover {
+      background: #000000;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <!-- MENÚ FIJO ARRIBA -->
+  <nav class="nav-simple">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#informacion personal">sobre el curso</a></li>
+      <li><a href="#sobre">sobre mi</a></li>
+      <li><a href="#contacto">unidades</a></li>
+      <li><a href="unidad1.html">Unidad I</a></li>
+      <li><a href="unidad2.html">Unidad II</a></li>
+  </section>
+
+    </ul>
+  </nav>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="header-contenido">
+      <img src="logo_unap.png" alt="Logo Universidad" class="logo">
+
+      <div class="titulo">
+        <h1>Universidad Nacional del Altiplano</h1>
+        <h3>Facultad de Ingeniería Estadística e Informática</h1>
+        <h3>Escuela Profesional de Ingeniería Estadística e Informática</h3>
+        <h1>Lenguaje de Programación II</h1>
+        <h2>¡HOLA! BIENVENIDO A MI PORTAFOLIO</h2>
+
+      </div>
+
+      <img src="logo_finesi.png" alt="Logo Facultad" class="logo">
+    </div>
+  </header>
+    <!-- INTRODUCCIÓN -->
+  <section class="caja" style="margin: 5px;">
+    <h1>SOBRE EL CURSO</h1>
+    <h3>
+El curso de Lenguajes de Programación II, correspondiente al área de estudios de especialidad, es de carácter teórico-práctico y está orientado a profundizar en
+paradigmas de programación avanzada como la programación orientada a objetos (POO) y la programación modular, aplicando estos conocimientos al desarrollo de
+soluciones informáticas escalables y eficientes. Los estudiantes desarrollarán habilidades en lenguajes para construir aplicaciones orientadas a objetos. Este curso se
+enfoca en la arquitectura de software que facilita la reutilización, modularidad, y escalabilidad, alineándose con los estándares internacionales de calidad del software. El
+curso está dividido en dos unidades:
+    </h3>
+  </section>
+
+    <!-- DATOS PERSONALES Y DEL CURSO -->
+<section class="contenedor">
+  <div class="caja datos">
+    <!-- Información a la derecha -->
+    <div class="info">
+      <h2>Sobre mi</h2>
+      <div class="datos-flex">
+           <img src="lenguajeII.jpg" alt="Foto del estudiante" class="foto">
+        <div>
+          <h3><strong>Nombre:</strong> Quispe Ito Luz Leidy</h3>
+          <h3><strong>Código:</strong> 240291</h3>
+          <h3><strong>Correo:</strong> quispeitoluzleidy@gmail.com</h3>
+        </div>
+
+        <div>
+          <h3><strong>Docente:</strong> Coyla Idme Leonel</h3>
+          <h3><strong>Semestre:</strong> 2025-I</h3>
+          <h3><strong>Grupo:</strong> A</h3>
+        </div>
+      </div>            
+
+</section>
+
+  <section class="contenedor">
+        <!-- Datos personales -->
+        <div class="caja">
+            <h1>UNIDAD I</h1>
+             <div>
+        
+                <h5>1. Introducción a POO Conceptos básicos de programación, diferencias entre programación estructurada</h5>
+                <h5>2. Paradigma de Objetos Objetos, clases, atributos, métodos</h5>
+                <h5>3. Sintaxis básica en el lenguaje elegido Creación de clases, instanciación de objetos</h5>
+                <h5>4. Encapsulamiento Modificadores de acceso, getters y setters</h5>
+                <h5>5. Métodos y sobrecarga Parámetros, retorno, sobrecarga de métodos</h5>
+                <h5>6. Constructores y destructores Inicialización y ciclo de vida de un objeto</h5>
+                <h5>7. Relaciones entre clases Asociación, agregación, composición</h5>
+                <h5>8. Ejercicio práctico de unidad (mini sistema con varias clases)</h5>
+                <h5>9. Proyecto intermedio: Aplicaciones de todos los conceptos de la Unidad I</h5>
+           
+            </div>
+        </div>
+
+        <!-- Datos del curso -->
+        <div class="caja">
+            <h1>UNIDAD II</h1>
+            <div>
+                <h5>10. Herencia en POO Concepto de herencia Herencia simple y múltiple Uso de super() en Python Ejerci</h5>
+                <h5>11. Polimorfismo Definición de polimorfismo Sobrecarga y sobreescritura de métodos Aplicaciones del</h5>
+                <h5>12. Clases Abstractas e Interfaces Diferencia entre clases abstractas e interfaces Implementación e</h5>
+                <h5>13. Manejo de Excepciones en POO Introducción a las excepciones Uso de try, except (Python)</h5>
+                <h5>14. Programación Genérica y Colecciones Introducción a la programación genérica Uso de listas, dicci</h5>
+                <h5>15. Principios SOLID en POO Principios de diseño de software Aplicación de SOLID en la programación</h5>
+                <h5>16. Proyecto Final Desarrollo de una aplicación completa utilizando POO Aplicación de herencia, poli</h5>
+                <h5>17. Evaluación Final Presentación del proyecto final Examen teórico sobre temas avanzados de POO.</h5>
+            </div>
+            
+    </section>
+
+  <!-- BOTONES DE UNIDADES -->
+  <section class="unidades">
+    <a href="unidad1.html" class="boton">Unidad I</a>
+    <a href="unidad2.html" class="boton">Unidad II</a>
+  </section>
+
+</body>
+</html>
+
+
