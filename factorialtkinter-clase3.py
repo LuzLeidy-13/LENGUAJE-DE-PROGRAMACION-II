@@ -1,55 +1,59 @@
+
 import tkinter as tk
 from tkinter import messagebox
 
-class Fibonaci:
-    def __init__(self, cantidad):
-        self.cantidad = cantidad
-        self.serie = []
+# Clase factorial
+class Factorial:
+    def __init__(self, numero):
+        self.numero = numero
+        self.resultado = 1
 
-    def generarserie(self):
-        a, b = 0, 1
-        self.serie = []  # Reiniciamos la lista
-        for _ in range(self.cantidad):
-            self.serie.append(a)
-            a, b = b, a + b
-        return self.serie
+    def calcular(self):
+        if self.numero < 0:
+            return None
+        for i in range(1, self.numero + 1):
+            self.resultado *= i
+        return self.resultado
 
-def generar():
+# Función para manejar el evento del botón
+def calcular_factorial():
     try:
-        cantidad = int(entry_cantidad.get())
-        if cantidad <= 0:
-            messagebox.showwarning("Advertencia", "Ingrese un número mayor que 0")
-            return
-        
-        mifibonaci = Fibonaci(cantidad)
-        resultado = mifibonaci.generarserie()
-        
-        # Mostrar en el cuadro de texto
-        text_resultado.delete("1.0", tk.END)
-        text_resultado.insert(tk.END, ", ".join(map(str, resultado)))
+        numero = int(entry_numero.get())
+        mifactorial = Factorial(numero)
+        resultado = mifactorial.calcular()
+        if resultado is None:
+            messagebox.showerror("Error", "El factorial no está definido para números negativos.")
+        else:
+            label_resultado.config(text=f"El factorial de {numero} es:\n{resultado}")
     except ValueError:
-        messagebox.showerror("Error", "Ingrese un número válido")
+        messagebox.showerror("Error", "Por favor ingrese un número entero válido.")
 
 # Ventana principal
 ventana = tk.Tk()
-ventana.title("Serie de Fibonacci")
-ventana.geometry("400x300")
-ventana.config(bg="#f0f0f0")
+ventana.title("Cálculo de Factorial")
+ventana.geometry("350x250")
+ventana.config(bg="#E8F0FE")
 
-# Etiqueta
-label = tk.Label(ventana, text="Ingrese la cantidad de números:", font=("Arial", 12), bg="#f0f0f0")
-label.pack(pady=10)
+# Etiquetas
+label_titulo = tk.Label(ventana, text="Calculadora de Factorial", font=("Arial", 14, "bold"), bg="#E8F0FE")
+label_titulo.pack(pady=10)
+
+label_ingreso = tk.Label(ventana, text="Ingrese un número:", font=("Arial", 11), bg="#E8F0FE")
+label_ingreso.pack()
 
 # Entrada
-entry_cantidad = tk.Entry(ventana, font=("Arial", 12))
-entry_cantidad.pack(pady=5)
+entry_numero = tk.Entry(ventana, font=("Arial", 11), justify="center")
+entry_numero.pack(pady=5)
 
 # Botón
-btn_generar = tk.Button(ventana, text="Generar Serie", font=("Arial", 12), command=generar,  bg="#800080",fg="white" )
-btn_generar.pack(pady=10)
+boton_calcular = tk.Button(ventana, text="Calcular", font=("Arial", 11, "bold"), bg="#4CAF50", fg="white",
+                           command=calcular_factorial)
+boton_calcular.pack(pady=10)
 
-# Cuadro de texto para resultado
-text_resultado = tk.Text(ventana, height=8, width=40, font=("Arial", 11))
-text_resultado.pack(pady=10)
+# Etiqueta de resultado
+label_resultado = tk.Label(ventana, text="", font=("Arial", 11, "bold"), fg="blue", bg="#E8F0FE", wraplength=300)
+label_resultado.pack(pady=10)
 
+# Ejecutar ventana
 ventana.mainloop()
+
