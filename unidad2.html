@@ -1,73 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
-<style>
-
+    <style>
        /* GENERAL */
-body {
-    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0;
-    background: linear-gradient(to right, #4b1872, #0c010f,#2e074c);
-    color: #cf9df3;
-}
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, 'Trebuchet MS', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #0a0336, #030116);
+      color: #474747;
+    }
 
-/* ENCABEZADO */
-header {
-    border-bottom: 3px solid #757476;
-    padding: 25px 35px;
-    background: linear-gradient(#76198e99,#2e074c)
-}
+    /* ENCABEZADO */
+    header {
+      border-bottom: 1px solid #01010a;
+      background: linear-gradient(#060114, #19056d);
+      color: rgb(178, 184, 227);
+    }
 
-.header-contenido {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-}
+    .header-contenido {
+      display: flex;
+      align-items: last baseline;
+      justify-content: space-between;
+      text-align: center;
+      flex-wrap: wrap;
+      padding: 20px 35px;
+    }
 
-.logo {
-    width: 230px;
-    height: auto;
-}
+    .logo {
+      width: 150px;
+      height: auto;
+    }
 
-.titulo h1 {
-    margin: 0;
-    font-size: 45px;
-    color: #f7f2fa;
-}
-.titulo h2, .titulo h3 {
-    margin: 3px 2;
-    font-size: 25px;
-}
+    .titulo h1 {
+      margin: 0;
+      font-family:'Montserrat', sans-serif ;
+      color: #ffffff;
+    }
 
-.contenedor {
-    margin: auto;
-    color: #ce9fed;
+    .titulo h2,
+    .titulo h3 {
+      margin: 1px 0;
+      font-size: 25px;
+      color: #6163a5;
+    }
+
+    .nav-simple a {
+      color: #ffffff;
+      text-decoration: gray;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .nav-simple a:hover {
+      background: #25299d;
+    }
+
+    /* CONTENEDORES */
+    .contenedor {
+      display: flex;
+      justify-content: space-between;
+      margin: 2px 2px 2px; /* 🧭 margen superior aumentado para que no tape el menú fijo */
+      gap: 120px;
+    }
+
+    .caja {
+      flex: 2;
+      background:linear-gradient(#040640,#01010a);
+      padding: 3px;
+      border: 2px solid #02020e;
+      border-radius: 5px;
+      color: #97999b;
+      margin:0;
+    }
+
+    .datos-flex {
+      display: flex;
+      float: left;
+      align-items: center;
+      gap: 100px;
     
-}
+    }
 
-/* BOTONES */
-.unidades {
-    text-align: center;
-    margin: 15px 0;
-}
+    .foto {
+      width: 250px ;
+      border-radius: 15%;
+      border: 1px solid #0c0c0c;
+      margin: 5px 0 50px;
+    
+      
+    }
 
-.boton {
-    display: inline-block;
-    margin: 40px;
-    padding: 30px 60px;
-    background: #593274a3;
-    color: rgb(219, 182, 237);
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+    /* BOTONES */
 
-.boton:hover {
-    background: #1c072b;
-}
+    .unidades {
+      text-align: center;
+      margin: 5px 0 5px;
+    }
 
-</style>
+    .semanas{
+       text-align: center;
+      margin: 5px 0 5px;
+    }  
+
+
+    .boton {
+      display: inline-block;
+      margin: 2px;
+      padding: 10px 25px;
+      background:#010313a3;
+      color: rgb(122, 127, 190);
+      text-decoration: rgb(29, 29, 129);
+      border-radius: 0px;
+      font-weight: bold;
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .boton:hover {
+      background: #000000;
+    }
+
+    </style>
+
 <body>
 
     <!-- ENCABEZADO -->
@@ -79,27 +134,153 @@ header {
                 <h1>Universidad Nacional del Altiplano</h1>
                 <h2>Facultad de Ingeniería Estadística e Informática</h2>
                 <h3>Escuela Profesional de Ingeniería Estadística e Informática</h3>
-                <h2>PROGRAMACIÓN NUMÉRICA - Unidad 2</h2>
+                <h2>LENGUAJE DE PROGRAMACION II - Unidad II</h2>
             </div>
 
             <img src="logo_finesi.png" alt="Logo Facultad" class="logo">
         </div>
     </header>
 
-    <!-- CONTENIDO DE UNIDAD 2 -->
-    <section class="caja">
-        <h2>Unidad 2: Métodos Numéricos</h2>
-        <p>
-            En esta unidad se estudiarán los métodos numéricos más usados para resolver
-            problemas de ecuaciones, interpolación, integración y derivación numérica.
-        </p>
-        <ul>
-            <li>Métodos de búsqueda de raíces</li>
-            <li>Interpolación y aproximación</li>
-            <li>Integración numérica</li>
-            <li>Derivación numérica</li>
-        </ul>
+    <!-- CONTENIDO DE UNIDAD 1 -->
+
+   <section class="caja">
+        <h3> SEMANA-9: Ejemplos realizados el - LUNES 20-10-2025 --------------- HERENCIA EN P.O.O------------</h3>
     </section>
+    <section>
+        <section class="semanas">
+        <a href="Class Animal HERENCIA.py" class="boton">Ejemplo 1: class: Animal #HERENCIA SIMPLE</a>
+        <a href="classFiguaraGeometrica HERENCIA.py" class="boton">Ejemplo 2: class: FiguraGeometrica </a>
+        <a href="classpatoherenciamultiple.py" class="boton">Ejemplo 3: class:Pato  #HERENCIA MULTIPLE</a>
+    </section>
+    <section class="caja">
+        <h3> SEMANA-9:  Ejemplos realizados el - JUEVES 23-19-2025 -------------EJEMPLOS DE HERENCIA MULTIPLE-------------------</h3>
+    </section>
+    <section class="semanas">
+        <a href="clasederivada IMC.py" class="boton">Ejemplo 1 class: IMC   </a>
+        <a href="" class="boton">Ejemplo 2 class: Hipotenusa </a>
+        <a href="clasederivada PersonaMultiple,py.py" class="boton">Ejemplo 3 class:PersonaMultiple</a>
+        <a href="clasederivada personamultipletkinter.py" class="boton"> Ejemplo 3 class: PersonaMultiple-Tkinter</a>
+        <a href="class vehiculoanfibio.py" class="boton">Eejmplo 4 class: Vehiculoanfibio </a>
+    </section>
+
+     <section class="caja">
+        <h3> SEMANA-10:  Ejemplos realizados el - LUNES 27-10-2025 ---------------POLIMORFISMO-----------</h3>
+    </section>
+        <section class="semanas">
+        <a href="classherenciaPolimorfismo.py" class="boton">Ejemplo 1 class: Animal </a>
+        <a href="classvehiculopoliformismo.py" class="boton">Ejemplo 2 class: Vehiculo</a>
+        <a href="class pajaroducktyping.py" class="boton">Ejemplo 3 Class: pajaro, Avion</a>
+         <a href="mover.py" class="boton">Ejemplo 4 Class: pajaro,pes,persona</a>
+        <a href="area.py" class="boton">Ejemplo 5 Class:cuadrado,rectangulo,circulo</a>
+        <a href="figura.py" class="boton">Ejemplo 6 Class: Figura</a>
+        <a href="figuraTkinter.py" class="boton">Ejemplo 6 6Class: Figura-Tkinter</a>
+        <a href="METODODEPAGO.PY" class="boton">Ejemplo 7 Class: Metodo de Pago</a>
+        <a href="metodo de padotkinter.py" class="boton">Ejemplo 7 Class: Metodo de Pago-Tkinter</a>
+    </section>
+    <section class="caja">
+        <h3> SEMANA-10:  Ejemplos realizados el - JUEVES 30-10-2025---------------COMPUTACION GRAFICA-----------------</h3>
+    </section>
+        <section class="semanas">
+        <a href="numeronatural.py" class="boton">Ejemplo 1 class: NumerosNaturales</a>
+        <a href="numeromultiplo.py" class="boton">Ejemplo 2 class: NumeroMultiplo</a>
+        
+    </section>
+  
+    <section class="caja">
+        <h3> SEMANA-11:  Ejemplos realizados el - LUNES 03-11-2025 ---------------</h3>
+    </section>
+        <section class="semanas">
+             <a href="triangulojiratorio.py" class="boton">Ejemplo 1 Triangulo Jiratorio</a>
+             <a href="triangulodeaplazable.py" class="boton"> Ejemplo 2 Triangulo Desplazable </a>
+             <a href="trianguloescala.py" class="boton">Eejmplo 3 Triangulo Escala </a>
+              <a href="tetera.py" class="boton">Eejmplo 4 Tetera </a>
+               <a href="cuadrado,py.py" class="boton">Eejmplo 5 cuadrado 3D </a>
+        </section>
+    <section class="caja">
+        <h3> SEMANA-11:  Ejemplos realizados el - JUEVES 06-11-2025-----------Manejo de Excepciones En P.O.O.---------------</h3>
+    </section>
+        <section class="semanas">
+             <a href="tipos de letra,py.py" class="boton">Ejemplo 1 class: Tipos de Letra</a>
+             <a href="ejemplos2.py" class="boton"> Ejemplo 2 class: Seno de X</a>
+             <a href="DIVIDIRexcepciones.py" class="boton">Eejmplo 3 class: Dividir </a>
+             <a href="cubo de cuatro caras.py" class="boton">Eejmplo 4 class: Cubo</a>
+    </section>
+      
+
+     <section class="caja">
+        <h3> SEMANA-11:  Ejemplos realizados el - LUNES 01-12-2025------------Programacion Genetica-----------------</h3>
+    </section>
+        <section class="semanas">
+             <a href="calcukar_hipotenusa.py" class="boton">Ejemplo 1 class: Hipotenusa</a>
+             <a href="serie de fibonacci.py" class="boton"> Ejemplo 2 class: Fibonacci</a>
+             <a href="serie de fibonacci tkinter.py" class="boton">Eejmplo 2 class: Fibonacci-Tkinter</a>
+             <a href="programacion generica.py" class="boton">Eejmplo 3 class: suma </a>
+              <a href="calcularhipotenusa.py" class="boton">Eejmplo 4 class: CalcularHipotenusa</a>
+               <a href="calculadorafactorial.py" class="boton">Eejmplo 5 class: CalculadoraFactorial </a>
+                <a href="TrianguloRectangulocorregido.py" class="boton">Eejmplo 4 class: TrianguloRectangulo </a>
+    </section>
+
+
+     <section class="caja">
+        <h3> SEMANA-11:  Ejemplos realizados el - JUEVES 04-12-2025</h3>
+    </section>
+        <section class="semanas">
+             <a href="classcalculadora.py" class="boton">Ejemplo 1 class: Calculadora</a>
+             <a href="calculadoratkinter.py" class="boton"> Ejemplo 1 class: Calculadora-Tkinter</a>
+             <a href="class figurageometricaclasegenrica-py.py" class="boton">Eejmplo 3 class: FiguraGeometrica </a>
+    </section>
+
+
+     <section class="caja">
+        <h3> SEMANA-11:  Ejemplos realizados el - LUNES  15-12-2025-----------------Principio SOLID ---------------------</h3>
+    </section>
+        <section class="semanas">
+             <a href="principios,py.py" class="boton">Ejemplo 1 class:CalculadoraFctorial </a>
+             <a href="fibonacci.py" class="boton"> Ejemplo 2 class: Fibonacci</a>
+             <a href="hipotenusaPrincipio.py" class="boton">Ejmplo 3 class: Hipotenusa </a>
+             <a href="figurageometrica.py" class="boton">Ejmplo 4 class: FiguraGeometrica</a>
+             <a href="figurasgeometricasTkinter.py" class="boton">Ejmplo 4 class: FiguraGeometrica-Tkinter </a>
+             <a href="CALCULADORA.py" class="boton">PRACTICA class: Calculadora </a>
+    </section>
+
+
+     <section class="caja">
+        <h3> SEMANA-11:  Ejemplos realizados el - JUEVES 18-12-2025---------------Practica-------------------</h3>
+    </section>
+        <section class="semanas">
+             <a href="inventario.py" class="boton">Practica-Inventario</a>
+             <a href="inventatio T kinter.py" class="boton"> Practica - Inventario_Tkinter</a>
+            >
+    </section>
+
+
+  
+
+
+ 
+
+
+          <!--infromacion final-->
+    <section class="contenedor">
+  <div class="caja datos">
+         <!-- Información a la derecha -->
+      <div class="datos-flex">
+           <img src="lenguajeII.jpg" alt="Foto del estudiante" class="foto">
+        <div>
+          <h3><strong>Nombre:</strong> Quispe Ito Luz Leidy</h3>
+          <h3><strong>Código:</strong> 240291</h3>
+          <h3><strong>Correo:</strong> quispeitoluzleidy@gmail.com</h3>
+        </div>
+
+        <div>
+          <h3><strong>Docente:</strong> Coyla Idme Leonel</h3>
+          <h3><strong>Semestre:</strong> 2025-I</h3>
+          <h3><strong>Grupo:</strong> A</h3>
+        </div>
+      </div>            
+
+</section>
+    
 
     <!-- BOTÓN DE REGRESAR -->
     <div class="unidades">
